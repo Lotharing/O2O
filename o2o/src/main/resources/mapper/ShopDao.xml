@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="top.lothar.o2o.dao.ShopDao">
+	<!-- 定于查询的返回类型Map -->
+	<resultMap type="top.lothar.o2o.entity.Shop" id="shopMap">
+		<!-- 主键 -->
+		<id column="shop_id" property="shopId"/>
+		<result column="shop_name" property="shopName" />
+		<result column="shop_desc" property="shopDesc" />
+		<result column="shop_addr" property="shopAddr" />
+		<result column="phone" property="phone" />
+		<result column="shop_img" property="shopImg" />
+		<result column="priority" property="priority" />
+		<result column="create_time" property="createTime" />
+		<result column="last_edit_time" property="lastEditTime" />
+		<result column="enable_status" property="enableStatus" />
+		<result column="advice" property="advice" />
+		<!-- area_id外键相关联的信息 所属区域 -->
+		<association property="area" javaType="top.lothar.o2o.entity.Area" column="area_id">
+			<id column="area_id" property="areaId" />
+			<result column="area_name" property="areaName" />
+		</association>
+		<!-- shop_category_id外键相关联的信息  所属店铺名称-->
+		<association property="shopCategory" javaType="top.lothar.o2o.entity.ShopCategory"
+			column="shop_category_id">
+			<id column="shop_category_id" property="shopCategoryId" />
+			<result column="shop_category_name" property="shopCategoryName" />
+		</association>
+		<!-- user_id外键相关联的信息 所属拥有者-->
+		<association property="owner" javaType="top.lothar.o2o.entity.PersonInfo"
+			column="user_id">
+			<id column="user_id" property="userId" />
+			<result column="name" property="name" />
+		</association>
+	</resultMap>
+	
+	<select id="queryShopList" resultMap="shopMap">
+		SELECT
+		s.shop_id,
+		s.shop_name,
+		s.shop_desc,
+		s.shop_addr,
+		s.phone,
+		s.shop_img,
+		s.priority,
+		s.create_time,
+		s.last_edit_time,
+		s.enable_status,
+		s.advice,
+		a.area_id,
+		a.area_name,
+		sc.shop_category_id,
+		sc.shop_category_name
+		FROM
+		tb_shop s,
+		tb_area a,
+		tb_shop_category sc
+		<where>
+			<if test="shopCondition.shopCategory != null and shopCondition.shopCategory.shopCategoryId != null">
+				and s.shop_category_id = #{shopCondition.shopCategory.shopCategoryId}
+			</if>
+			<if test="shopCondition.area != null and shopCondition.area.areaId">
+				and s.area_id = #{shopCondition.area.areaId}
+			</if>
+			<if test="shopCondition.shopName != null">
+				and s.shop_name like '%${shopCondition.shopName}%'
+			</if>
+			<if test="shopCondition.enableStatus != null">
+				and s.enable_status = #{shopCondition.enableStatus}
+			</if>
+			<if test="shopCondition.owner != null and shopCondition.owner.userId">
+				and s.owner_id = #{shopCondition.owner.userId}
+			</if>
+			AND
+			s.area_id = a.area_id
+			AND
+			s.shop_category_id = sc.shop_category_id
+		</where>
+		ORDER BY
+		priority DESC
+		LIMIT #{rowIndex},#{pageSize}
+	</select>
+	
+	<select id="queryShopCount" resultType="int">
+		SELECT
+		COUNT(*)
+		FROM
+		tb_shop s,
+		tb_area a,
+		tb_shop_category sc
+		<where>
+			<if test="shopCondition.shopCategory != null and shopCondition.shopCategory.shopCategoryId != null">
+				and s.shop_category_id = #{shopCondition.shopCategory.shopCategoryId}
+			</if>
+			<if test="shopCondition.area != null and shopCondition.area.areaId">
+				and s.area_id = #{shopCondition.area.areaId}
+			</if>
+			<if test="shopCondition.shopName != null">
+				and s.shop_name like '%${shopCondition.shopName}%'
+			</if>
+			<if test="shopCondition.enableStatus != null">
+				and s.enable_status = #{shopCondition.enableStatus}
+			</if>
+			<if test="shopCondition.owner != null and shopCondition.owner.userId">
+				and s.owner_id = #{shopCondition.owner.userId}
+			</if>
+			AND
+			s.area_id = a.area_id
+			AND
+			s.shop_category_id = sc.shop_category_id
+		</where>
+	</select>
+	
+	<select id="queryByShopId" resultMap="shopMap" parameterType="Long">
+		SELECT
+		s.shop_id,
+		s.shop_name,
+		s.shop_desc,
+		s.shop_addr,
+		s.phone,
+		s.shop_img,
+		s.priority,
+		s.create_time,
+		s.last_edit_time,
+		s.enable_status,
+		s.advice,
+		a.area_id,
+		a.area_name,
+		sc.shop_category_id,
+		sc.shop_category_name
+		FROM
+		tb_shop s,
+		tb_area a,
+		tb_shop_category sc
+		WHERE
+		s.area_id=a.area_id
+		AND
+		s.shop_category_id=sc.shop_category_id
+		AND
+		s.shop_id = #{shopId}
+	</select>
+	
+	<insert id="insertShop" useGeneratedKeys="true"
+		keyColumn="shop_id" keyProperty="shopId">
+		INSERT INTO
+		tb_shop(owner_id,area_id,shop_category_id,shop_name,shop_desc,shop_addr,
+		phone,shop_img,priority,create_time,last_edit_time,enable_status,advice)
+		VALUES(#{owner.userId},#{area.areaId},#{shopCategory.shopCategoryId},#{shopName},#{shopDesc},
+		#{shopAddr},#{phone},#{shopImg},#{priority},#{createTime},#{lastEditTime},#{enableStatus},#{advice})
+	</insert>
+
+	<update id="updateShop"
+		parameterType="top.lothar.o2o.entity.Shop">
+		UPDATE tb_shop
+		<set>
+			<if test="shopName != null">shop_name=#{shopName},</if>
+			<if test="shopDesc != null">shop_desc=#{shopDesc},</if>
+			<if test="shopAddr != null">shop_addr=#{shopAddr},</if>
+			<if test="phone != null">phone=#{phone},</if>
+			<if test="shopImg != null">shop_img=#{shopImg},</if>
+			<if test="priority != null">priority=#{priority},</if>
+			<if test="lastEditTime != null">last_edit_time=#{lastEditTime},</if>
+			<if test="enableStatus != null">enable_status=#{enableStatus},</if>
+			<if test="advice != null">advice=#{advice},</if>
+			<if test="area != null">area_id=#{area.areaId},</if>
+			<if test="shopCategory != null">shop_category_id=#{shopCategory.shopCategoryId}</if>
+		</set>
+		WHERE shop_id=#{shopId}
+	</update>
+</mapper>

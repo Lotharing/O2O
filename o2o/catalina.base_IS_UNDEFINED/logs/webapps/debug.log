@@ -1,0 +1,3 @@
+2019-01-04 20:25:23.550 [main] DEBUG top.lothar.o2o.dao.ShopDao.updateShop - ==>  Preparing: UPDATE tb_shop SET shop_name=?, shop_desc=?, last_edit_time=? WHERE shop_id=? 
+2019-01-04 20:25:23.635 [main] DEBUG top.lothar.o2o.dao.ShopDao.updateShop - ==> Parameters: 店铺1(String), 测试更新(String), 2019-01-04 20:25:23.047(Timestamp), 1(Long)
+2019-01-04 20:25:23.675 [main] DEBUG top.lothar.o2o.dao.ShopDao.updateShop - <==    Updates: 1

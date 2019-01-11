@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper>
+
+	<insert id="insertProduct" parameterType="top.lothar.o2o.entity.Product" keyColumn="product_id" keyProperty="productId" useGeneratedKeys="true">
+		INSERT INTO
+		tb_product(
+		product_name,product_desc,img_addr,
+		normal_price,promotion_price,priority,create_time,
+		last_edit_time,enable_status,point,product_category_id,
+		shop_id)
+		VALUES
+		(#{productName},
+		#{productDesc},
+		#{imgAddr},
+		#{normalPrice},
+		#{promotionPrice},
+		#{priority},
+		#{createTime},
+		#{lastEditTime},
+		#{enableStatus},
+		#{point},
+		#{productCategory.productCategoryId},
+		#{shop.shopId})
+	</insert>
+
+</mapper>
