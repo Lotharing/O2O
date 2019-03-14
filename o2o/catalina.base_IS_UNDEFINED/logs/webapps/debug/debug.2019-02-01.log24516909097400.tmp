@@ -1,0 +1,245 @@
+2019-02-01 16:02:28.084 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id=? 
+2019-02-01 16:02:28.143 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 4(Long)
+2019-02-01 16:02:28.208 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2019-02-01 18:58:10.160 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority, create_time,product_id) VALUES ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2019-02-01 18:58:10.240 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2019-02-01 18:58:09.682(Timestamp), 4(Long), 图片2(String), null, 1(Integer), 2019-02-01 18:58:09.682(Timestamp), 4(Long)
+2019-02-01 18:58:10.260 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - <==    Updates: 2
+2019-02-01 18:58:10.271 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, p.point, pm.product_img_id, pm.img_addr AS detail_img, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2019-02-01 18:58:10.272 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==> Parameters: 4(Long)
+2019-02-01 18:59:12.274 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id=? 
+2019-02-01 18:59:12.323 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 4(Long)
+2019-02-01 18:59:12.346 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2019-02-01 18:59:44.175 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority, create_time,product_id) VALUES ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2019-02-01 18:59:44.225 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==> Parameters: 图片1(String), 测试图片2(String), 1(Integer), 2019-02-01 18:59:43.697(Timestamp), 4(Long), 图片2(String), null, 2(Integer), 2019-02-01 18:59:43.697(Timestamp), 4(Long)
+2019-02-01 18:59:44.246 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - <==    Updates: 2
+2019-02-01 18:59:44.257 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr AS detail_img, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2019-02-01 18:59:44.258 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==> Parameters: 4(Long)
+2019-02-01 18:59:44.389 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - <==      Total: 2
+2019-02-01 19:00:13.289 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id=? 
+2019-02-01 19:00:13.363 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 4(Long)
+2019-02-01 19:00:13.379 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2019-02-01 19:13:32.235 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority, create_time,product_id) VALUES ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2019-02-01 19:13:32.332 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2019-02-01 19:13:31.828(Timestamp), 4(Long), 图片2(String), 测试图片2(String), 2(Integer), 2019-02-01 19:13:31.828(Timestamp), 4(Long)
+2019-02-01 19:13:32.350 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - <==    Updates: 2
+2019-02-01 19:13:32.361 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr AS detail_img, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2019-02-01 19:13:32.361 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==> Parameters: 4(Long)
+2019-02-01 19:13:32.380 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - <==      Total: 2
+2019-02-01 19:13:48.418 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id=? 
+2019-02-01 19:13:48.507 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 4(Long)
+2019-02-01 19:13:48.525 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2019-02-01 19:25:55.666 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, product_category_id=? WHERE shop_id=? AND product_id=? 
+2019-02-01 19:25:55.819 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - ==> Parameters: 第一个商品(String), 2(Long), 1(Long), 1(Long)
+2019-02-01 19:25:55.852 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
+2019-02-01 21:56:35.535 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT product_img_id, img_addr, img_desc, priority, create_time, product_id FROM tb_product_img WHERE product_id=? ORDER BY product_img_id ASC 
+2019-02-01 21:56:35.581 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 5(Long)
+2019-02-01 21:56:35.631 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 2
+2019-02-01 22:17:54.016 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\1\2019020122175472340.jpg
+2019-02-01 22:17:54.020 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\1\2019020122175472340.jpg
+2019-02-01 22:17:54.021 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:17:55.748 [main] DEBUG top.lothar.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id, shop_id) VALUES (?,?,?, ?,?,?,?, ?,?,?, ?) 
+2019-02-01 22:17:55.793 [main] DEBUG top.lothar.o2o.dao.ProductDao.insertProduct - ==> Parameters: 添加缩略图详情图(String), 测试店铺(String), \upload\images\item\shop\1\2019020122175472340.jpg(String), null, null, 20(Integer), 2019-02-01 22:17:53.998(Timestamp), 2019-02-01 22:17:53.998(Timestamp), 1(Integer), 1(Long), 1(Long)
+2019-02-01 22:17:55.795 [main] DEBUG top.lothar.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2019-02-01 22:17:55.804 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\1\2019020122175564307.jpg
+2019-02-01 22:17:55.805 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\1\2019020122175564307.jpg
+2019-02-01 22:17:55.805 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:17:55.954 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\1\2019020122175548552.jpg
+2019-02-01 22:17:55.955 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\1\2019020122175548552.jpg
+2019-02-01 22:17:55.955 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:17:56.212 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority, create_time,product_id) VALUES ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2019-02-01 22:17:56.214 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==> Parameters: \upload\images\item\shop\1\2019020122175564307.jpg(String), null, null, 2019-02-01 22:17:55.954(Timestamp), 6(Long), \upload\images\item\shop\1\2019020122175548552.jpg(String), null, null, 2019-02-01 22:17:56.178(Timestamp), 6(Long)
+2019-02-01 22:17:56.215 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - <==    Updates: 2
+2019-02-01 22:19:45.079 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id=? 
+2019-02-01 22:19:45.119 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 6(Long)
+2019-02-01 22:19:45.142 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2019-02-01 22:22:06.069 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr AS detail_img, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2019-02-01 22:22:06.140 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2019-02-01 22:22:06.165 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - <==      Total: 2
+2019-02-01 22:22:06.202 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\2\2019020122220678779.jpg
+2019-02-01 22:22:06.202 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\2\2019020122220678779.jpg
+2019-02-01 22:22:06.202 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:22:06.491 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT product_img_id, img_addr, img_desc, priority, create_time, product_id FROM tb_product_img WHERE product_id=? ORDER BY product_img_id ASC 
+2019-02-01 22:22:06.492 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 2(Long)
+2019-02-01 22:22:06.495 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 2
+2019-02-01 22:22:06.496 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id=? 
+2019-02-01 22:22:06.497 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
+2019-02-01 22:22:06.497 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2019-02-01 22:22:06.498 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\2\2019020122220637742.jpg
+2019-02-01 22:22:06.498 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\2\2019020122220637742.jpg
+2019-02-01 22:22:06.498 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:22:06.567 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\2\2019020122220694782.jpg
+2019-02-01 22:22:06.567 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\2\2019020122220694782.jpg
+2019-02-01 22:22:06.567 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:22:06.735 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority, create_time,product_id) VALUES ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2019-02-01 22:22:06.738 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==> Parameters: \upload\images\item\shop\2\2019020122220637742.jpg(String), null, null, 2019-02-01 22:22:06.567(Timestamp), 2(Long), \upload\images\item\shop\2\2019020122220694782.jpg(String), null, null, 2019-02-01 22:22:06.699(Timestamp), 2(Long)
+2019-02-01 22:22:06.739 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - <==    Updates: 2
+2019-02-01 22:22:06.751 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, img_addr=?, last_edit_time=? WHERE shop_id=? AND product_id=? 
+2019-02-01 22:22:06.752 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - ==> Parameters: 第二个商品(String), \upload\images\item\shop\2\2019020122220678779.jpg(String), 2019-02-01 22:22:06.036(Timestamp), 2(Long), 2(Long)
+2019-02-01 22:22:06.753 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - <==    Updates: 0
+2019-02-01 22:23:56.309 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr AS detail_img, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2019-02-01 22:23:56.371 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2019-02-01 22:23:56.394 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - <==      Total: 2
+2019-02-01 22:23:56.405 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\2\2019020122235655221.jpg
+2019-02-01 22:23:56.405 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\2\2019020122235655221.jpg
+2019-02-01 22:23:56.405 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:23:56.693 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT product_img_id, img_addr, img_desc, priority, create_time, product_id FROM tb_product_img WHERE product_id=? ORDER BY product_img_id ASC 
+2019-02-01 22:23:56.693 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 2(Long)
+2019-02-01 22:23:56.696 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 2
+2019-02-01 22:23:56.697 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id=? 
+2019-02-01 22:23:56.698 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
+2019-02-01 22:23:56.698 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2019-02-01 22:23:56.699 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\2\2019020122235694902.jpg
+2019-02-01 22:23:56.699 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\2\2019020122235694902.jpg
+2019-02-01 22:23:56.699 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:23:56.765 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\2\2019020122235645097.jpg
+2019-02-01 22:23:56.765 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\2\2019020122235645097.jpg
+2019-02-01 22:23:56.765 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:23:56.930 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority, create_time,product_id) VALUES ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2019-02-01 22:23:56.934 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==> Parameters: \upload\images\item\shop\2\2019020122235694902.jpg(String), null, null, 2019-02-01 22:23:56.764(Timestamp), 2(Long), \upload\images\item\shop\2\2019020122235645097.jpg(String), null, null, 2019-02-01 22:23:56.895(Timestamp), 2(Long)
+2019-02-01 22:23:56.936 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - <==    Updates: 2
+2019-02-01 22:23:56.945 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, img_addr=?, last_edit_time=? WHERE shop_id=? AND product_id=? 
+2019-02-01 22:23:56.946 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - ==> Parameters: 第二个商品(String), \upload\images\item\shop\2\2019020122235655221.jpg(String), 2019-02-01 22:23:56.28(Timestamp), 2(Long), 2(Long)
+2019-02-01 22:23:56.947 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - <==    Updates: 0
+2019-02-01 22:41:45.261 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr AS detail_img, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2019-02-01 22:41:45.324 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2019-02-01 22:41:45.350 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - <==      Total: 2
+2019-02-01 22:41:45.360 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\2\2019020122414556482.jpg
+2019-02-01 22:41:45.360 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\2\2019020122414556482.jpg
+2019-02-01 22:41:45.361 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:41:45.638 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT product_img_id, img_addr, img_desc, priority, create_time, product_id FROM tb_product_img WHERE product_id=? ORDER BY product_img_id ASC 
+2019-02-01 22:41:45.639 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 2(Long)
+2019-02-01 22:41:45.641 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 2
+2019-02-01 22:41:45.642 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id=? 
+2019-02-01 22:41:45.643 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
+2019-02-01 22:41:45.643 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2019-02-01 22:41:45.644 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\2\2019020122414527735.jpg
+2019-02-01 22:41:45.644 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\2\2019020122414527735.jpg
+2019-02-01 22:41:45.644 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:41:45.706 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\2\2019020122414566001.jpg
+2019-02-01 22:41:45.706 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\2\2019020122414566001.jpg
+2019-02-01 22:41:45.706 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:41:45.865 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority, create_time,product_id) VALUES ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2019-02-01 22:41:45.867 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==> Parameters: \upload\images\item\shop\2\2019020122414527735.jpg(String), null, null, 2019-02-01 22:41:45.705(Timestamp), 2(Long), \upload\images\item\shop\2\2019020122414566001.jpg(String), null, null, 2019-02-01 22:41:45.826(Timestamp), 2(Long)
+2019-02-01 22:41:45.868 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - <==    Updates: 2
+2019-02-01 22:41:45.878 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, img_addr=?, last_edit_time=? WHERE shop_id=? AND product_id=? 
+2019-02-01 22:41:45.879 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - ==> Parameters: 第二个商品(String), \upload\images\item\shop\2\2019020122414556482.jpg(String), 2019-02-01 22:41:45.232(Timestamp), 2(Long), 2(Long)
+2019-02-01 22:41:45.880 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - <==    Updates: 0
+2019-02-01 22:45:41.039 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr AS detail_img, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2019-02-01 22:45:41.075 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2019-02-01 22:45:41.099 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - <==      Total: 2
+2019-02-01 22:45:41.114 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\2\2019020122454143190.jpg
+2019-02-01 22:45:41.114 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\2\2019020122454143190.jpg
+2019-02-01 22:45:41.114 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:45:41.749 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT product_img_id, img_addr, img_desc, priority, create_time, product_id FROM tb_product_img WHERE product_id=? ORDER BY product_img_id ASC 
+2019-02-01 22:45:41.750 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 2(Long)
+2019-02-01 22:45:41.752 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 2
+2019-02-01 22:45:41.753 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id=? 
+2019-02-01 22:45:41.754 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
+2019-02-01 22:45:41.755 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2019-02-01 22:45:41.755 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\2\2019020122454170458.jpg
+2019-02-01 22:45:41.755 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\2\2019020122454170458.jpg
+2019-02-01 22:45:41.755 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:45:41.821 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\2\2019020122454148344.jpg
+2019-02-01 22:45:41.822 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\2\2019020122454148344.jpg
+2019-02-01 22:45:41.822 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:45:41.992 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority, create_time,product_id) VALUES ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2019-02-01 22:45:41.995 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==> Parameters: \upload\images\item\shop\2\2019020122454170458.jpg(String), null, null, 2019-02-01 22:45:41.821(Timestamp), 2(Long), \upload\images\item\shop\2\2019020122454148344.jpg(String), null, null, 2019-02-01 22:45:41.957(Timestamp), 2(Long)
+2019-02-01 22:45:41.996 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - <==    Updates: 2
+2019-02-01 22:45:42.006 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, img_addr=?, last_edit_time=? WHERE shop_id=? AND product_id=? 
+2019-02-01 22:45:42.007 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - ==> Parameters: 第二个商品(String), \upload\images\item\shop\2\2019020122454143190.jpg(String), 2019-02-01 22:45:41.01(Timestamp), 2(Long), 2(Long)
+2019-02-01 22:45:42.008 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - <==    Updates: 0
+2019-02-01 22:46:36.283 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr AS detail_img, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2019-02-01 22:46:36.346 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2019-02-01 22:46:36.370 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - <==      Total: 2
+2019-02-01 22:46:36.380 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\1\2019020122463665669.jpg
+2019-02-01 22:46:36.380 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\1\2019020122463665669.jpg
+2019-02-01 22:46:36.380 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:46:36.647 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT product_img_id, img_addr, img_desc, priority, create_time, product_id FROM tb_product_img WHERE product_id=? ORDER BY product_img_id ASC 
+2019-02-01 22:46:36.647 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 2(Long)
+2019-02-01 22:46:36.650 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 2
+2019-02-01 22:46:36.651 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id=? 
+2019-02-01 22:46:36.651 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
+2019-02-01 22:46:36.652 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2019-02-01 22:46:36.653 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\1\2019020122463686798.jpg
+2019-02-01 22:46:36.653 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\1\2019020122463686798.jpg
+2019-02-01 22:46:36.653 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:46:36.716 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\1\2019020122463620709.jpg
+2019-02-01 22:46:36.716 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\1\2019020122463620709.jpg
+2019-02-01 22:46:36.716 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:46:36.878 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority, create_time,product_id) VALUES ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2019-02-01 22:46:36.880 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==> Parameters: \upload\images\item\shop\1\2019020122463686798.jpg(String), null, null, 2019-02-01 22:46:36.716(Timestamp), 2(Long), \upload\images\item\shop\1\2019020122463620709.jpg(String), null, null, 2019-02-01 22:46:36.845(Timestamp), 2(Long)
+2019-02-01 22:46:36.882 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - <==    Updates: 2
+2019-02-01 22:46:36.891 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, img_addr=?, last_edit_time=? WHERE shop_id=? AND product_id=? 
+2019-02-01 22:46:36.892 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - ==> Parameters: 第二个商品(String), \upload\images\item\shop\1\2019020122463665669.jpg(String), 2019-02-01 22:46:36.251(Timestamp), 1(Long), 2(Long)
+2019-02-01 22:46:36.893 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
+2019-02-01 22:47:46.479 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr AS detail_img, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2019-02-01 22:47:46.541 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2019-02-01 22:47:46.563 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - <==      Total: 2
+2019-02-01 22:47:46.576 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\1\2019020122474644154.jpg
+2019-02-01 22:47:46.576 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\1\2019020122474644154.jpg
+2019-02-01 22:47:46.576 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:47:46.856 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT product_img_id, img_addr, img_desc, priority, create_time, product_id FROM tb_product_img WHERE product_id=? ORDER BY product_img_id ASC 
+2019-02-01 22:47:46.857 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 2(Long)
+2019-02-01 22:47:46.859 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 2
+2019-02-01 22:47:46.864 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id=? 
+2019-02-01 22:47:46.865 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
+2019-02-01 22:47:46.866 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2019-02-01 22:47:46.866 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\1\2019020122474688240.jpg
+2019-02-01 22:47:46.867 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\1\2019020122474688240.jpg
+2019-02-01 22:47:46.867 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:47:46.925 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\1\2019020122474612085.jpg
+2019-02-01 22:47:46.925 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\1\2019020122474612085.jpg
+2019-02-01 22:47:46.926 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:47:47.096 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority, create_time,product_id) VALUES ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2019-02-01 22:47:47.099 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==> Parameters: \upload\images\item\shop\1\2019020122474688240.jpg(String), null, null, 2019-02-01 22:47:46.925(Timestamp), 2(Long), \upload\images\item\shop\1\2019020122474612085.jpg(String), null, null, 2019-02-01 22:47:47.06(Timestamp), 2(Long)
+2019-02-01 22:47:47.100 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - <==    Updates: 2
+2019-02-01 22:47:47.109 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, product_desc=?, img_addr=?, last_edit_time=? WHERE shop_id=? AND product_id=? 
+2019-02-01 22:47:47.110 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - ==> Parameters: 第二个商品(String), 更新商品信息(String), \upload\images\item\shop\1\2019020122474644154.jpg(String), 2019-02-01 22:47:46.449(Timestamp), 1(Long), 2(Long)
+2019-02-01 22:47:47.111 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
+2019-02-01 22:48:20.087 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr AS detail_img, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2019-02-01 22:48:20.125 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2019-02-01 22:48:20.149 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - <==      Total: 2
+2019-02-01 22:48:20.163 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\1\2019020122482028531.jpg
+2019-02-01 22:48:20.163 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\1\2019020122482028531.jpg
+2019-02-01 22:48:20.164 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:48:20.498 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT product_img_id, img_addr, img_desc, priority, create_time, product_id FROM tb_product_img WHERE product_id=? ORDER BY product_img_id ASC 
+2019-02-01 22:48:20.499 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 2(Long)
+2019-02-01 22:48:20.501 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 2
+2019-02-01 22:48:20.506 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id=? 
+2019-02-01 22:48:20.507 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
+2019-02-01 22:48:20.508 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2019-02-01 22:48:20.509 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\1\2019020122482021500.jpg
+2019-02-01 22:48:20.509 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\1\2019020122482021500.jpg
+2019-02-01 22:48:20.509 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:48:20.572 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\1\2019020122482053557.jpg
+2019-02-01 22:48:20.572 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\1\2019020122482053557.jpg
+2019-02-01 22:48:20.572 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:48:20.739 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority, create_time,product_id) VALUES ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2019-02-01 22:48:20.742 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==> Parameters: \upload\images\item\shop\1\2019020122482021500.jpg(String), null, null, 2019-02-01 22:48:20.571(Timestamp), 2(Long), \upload\images\item\shop\1\2019020122482053557.jpg(String), null, null, 2019-02-01 22:48:20.704(Timestamp), 2(Long)
+2019-02-01 22:48:20.743 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - <==    Updates: 2
+2019-02-01 22:48:20.751 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, product_desc=?, img_addr=?, last_edit_time=? WHERE shop_id=? AND product_id=? 
+2019-02-01 22:48:20.752 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - ==> Parameters: 第二个商品(String), 更新商品信息(String), \upload\images\item\shop\1\2019020122482028531.jpg(String), 2019-02-01 22:48:20.059(Timestamp), 1(Long), 2(Long)
+2019-02-01 22:48:20.752 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
+2019-02-01 22:48:33.341 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr AS detail_img, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2019-02-01 22:48:33.410 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - ==> Parameters: 2(Long)
+2019-02-01 22:48:33.432 [main] DEBUG top.lothar.o2o.dao.ProductDao.queryProductById - <==      Total: 2
+2019-02-01 22:48:33.445 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\1\2019020122483379501.jpg
+2019-02-01 22:48:33.445 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\1\2019020122483379501.jpg
+2019-02-01 22:48:33.445 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:48:33.709 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - ==>  Preparing: SELECT product_img_id, img_addr, img_desc, priority, create_time, product_id FROM tb_product_img WHERE product_id=? ORDER BY product_img_id ASC 
+2019-02-01 22:48:33.710 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - ==> Parameters: 2(Long)
+2019-02-01 22:48:33.712 [main] DEBUG t.lothar.o2o.dao.ProductImgDao.queryProductImgList - <==      Total: 2
+2019-02-01 22:48:33.718 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id=? 
+2019-02-01 22:48:33.718 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 2(Long)
+2019-02-01 22:48:33.719 [main] DEBUG t.l.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2019-02-01 22:48:33.720 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\1\2019020122483367014.jpg
+2019-02-01 22:48:33.720 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\1\2019020122483367014.jpg
+2019-02-01 22:48:33.720 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:48:33.786 [main] DEBUG top.lothar.o2o.util.ImageUtil - current relativeAddr is :\upload\images\item\shop\1\2019020122483367960.jpg
+2019-02-01 22:48:33.787 [main] DEBUG top.lothar.o2o.util.ImageUtil - current complete addr is :D:\projectdev\image\\upload\images\item\shop\1\2019020122483367960.jpg
+2019-02-01 22:48:33.787 [main] DEBUG top.lothar.o2o.util.ImageUtil - basePath is :/F:/JavaEE/WorkSpace/o2o/target/test-classes/
+2019-02-01 22:48:33.955 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority, create_time,product_id) VALUES ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2019-02-01 22:48:33.957 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - ==> Parameters: \upload\images\item\shop\1\2019020122483367014.jpg(String), null, null, 2019-02-01 22:48:33.786(Timestamp), 2(Long), \upload\images\item\shop\1\2019020122483367960.jpg(String), null, null, 2019-02-01 22:48:33.923(Timestamp), 2(Long)
+2019-02-01 22:48:33.958 [main] DEBUG t.l.o2o.dao.ProductImgDao.bacthInsertProductImg - <==    Updates: 2
+2019-02-01 22:48:33.971 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, product_desc=?, img_addr=?, last_edit_time=? WHERE shop_id=? AND product_id=? 
+2019-02-01 22:48:33.971 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - ==> Parameters: 第二个商品(String), 更新商品信息(String), \upload\images\item\shop\1\2019020122483379501.jpg(String), 2019-02-01 22:48:33.312(Timestamp), 1(Long), 2(Long)
+2019-02-01 22:48:33.972 [main] DEBUG top.lothar.o2o.dao.ProductDao.updateProduct - <==    Updates: 1

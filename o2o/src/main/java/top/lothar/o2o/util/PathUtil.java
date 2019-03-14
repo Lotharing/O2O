@@ -21,7 +21,7 @@ public class PathUtil {
 			basePath = "home/xiangze/image/";
 		}
 		basePath = basePath.replace("/", separator);
-
+		
 		return basePath;
 	}
 

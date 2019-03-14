@@ -11,6 +11,7 @@ import top.lothar.o2o.dao.ShopDao;
 import top.lothar.o2o.dto.ImageHolder;
 import top.lothar.o2o.dto.ShopExecution;
 import top.lothar.o2o.entity.Shop;
+import top.lothar.o2o.entity.ShopCategory;
 import top.lothar.o2o.enums.ShopStateEnum;
 import top.lothar.o2o.exceptions.ShopOperationException;
 import top.lothar.o2o.service.ShopService;
@@ -135,7 +136,7 @@ public class ShopServiceImpl implements ShopService {
 		List<Shop> shopList = shopDao.queryShopList(shopCondition, rowIndex, pageSize);
 		int count = shopDao.queryShopCount(shopCondition);
 		ShopExecution se = new ShopExecution();
-		if (shopList != null) {
+		if (shopList!=null) {
 			se.setShopList(shopList);
 			se.setCount(count);
 		}else {

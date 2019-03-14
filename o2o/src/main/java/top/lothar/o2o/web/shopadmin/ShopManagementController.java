@@ -8,6 +8,8 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,6 +35,7 @@ import top.lothar.o2o.service.ShopCategoryService;
 import top.lothar.o2o.service.ShopService;
 import top.lothar.o2o.util.CodeUtil;
 import top.lothar.o2o.util.HttpServletRequestUtil;
+import top.lothar.o2o.web.wechat.WechatLoginController;
 /**
  * 处理店铺提交的信息
  * @author Lothar
@@ -41,6 +44,8 @@ import top.lothar.o2o.util.HttpServletRequestUtil;
 @Controller
 @RequestMapping("/shopadmin")
 public class ShopManagementController {
+	
+	private static Logger log = LoggerFactory.getLogger(ShopManagementController.class);
 	@Autowired
 	private ShopService shopService;
 	
@@ -93,7 +98,7 @@ public class ShopManagementController {
 		
 		try {
 			//获取数据库中ShopCategory的二级店铺列表,不携带parentid的信息，也就是完全二级店铺信息
-			shopCategoryList = shopCategoryService.getShopCategoryList(new ShopCategory());
+			shopCategoryList = shopCategoryService.queryShopCategory(new ShopCategory());
 			areaList = areaService.getAreaList();
 			modelMap.put("shopCategoryList", shopCategoryList);
 			modelMap.put("areaList", areaList);
@@ -305,11 +310,15 @@ public class ShopManagementController {
 	@ResponseBody
 	private Map<String, Object> getShopList(HttpServletRequest request){
 		Map<String, Object> modelMap = new HashMap<String,Object>();
-		PersonInfo user = new PersonInfo();
-		user.setUserId(1L);
-		user.setName("test");
-		request.getSession().setAttribute("user", user);
-		user = (PersonInfo)request.getSession().getAttribute("user");
+		
+		
+//		user.setUserId(6L);
+//		user.setName("test");
+//		request.getSession().setAttribute("user", user);
+		
+		//以上硬编码，在之前local中login中session中已经存入user
+		PersonInfo user = (PersonInfo)request.getSession().getAttribute("user");
+		log.debug("在getShopList中session获取user"+"UserId为==================================="+user.getUserId());
 		try {
 			Shop shopCondition = new Shop();
 			shopCondition.setOwner(user);

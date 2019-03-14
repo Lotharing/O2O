@@ -17,7 +17,7 @@ public class HeadLine {
 	//头条权重
 	private Integer priority;
 	//头条状态 0 不可用  1 可用
-	private Integer enableStaus;
+	private Integer enableStatus;
 	//创建时间
 	private Date createTime;
 	//更新时间
@@ -63,12 +63,12 @@ public class HeadLine {
 		this.priority = priority;
 	}
 
-	public Integer getEnableStaus() {
-		return enableStaus;
+	public Integer getEnableStatus() {
+		return enableStatus;
 	}
 
-	public void setEnableStaus(Integer enableStaus) {
-		this.enableStaus = enableStaus;
+	public void setEnableStatus(Integer enableStatus) {
+		this.enableStatus = enableStatus;
 	}
 
 	public Date getCreateTime() {

@@ -8,8 +8,17 @@
     
     <!-- 配置整合Mybatis过程 -->
 	<!-- 1.配置数据库相关参数properties的属性：${url} -->
-	<context:property-placeholder location="classpath:jdbc.properties"/>
-	
+	<!-- <context:property-placeholder location="classpath:jdbc.properties"/> -->
+	<!-- 调用加密功能 -->
+	<bean class="top.lothar.o2o.util.EncryptPropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:jdbc.properties</value>
+				<value>classpath:redis.properties</value>
+			</list>
+		</property>
+		<property name="fileEncoding" value="UTF-8"></property>
+	</bean>
     <!-- 2.数据库连接池 -->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
     	<!-- 配置连接池属性 -->
@@ -27,7 +36,6 @@
 		<!-- 当获取连接失败重试次数 -->
 		<property name="acquireRetryAttempts" value="2" />
     </bean>
-    
     <!-- 3.配置SqlSessionFactory对象 -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
     	<!-- 注入数据库连接池 -->

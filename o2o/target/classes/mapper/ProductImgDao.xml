@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="top.lothar.o2o.dao.ProductImgDao">
+	<!-- 批量添加商品图片 -->
+	<insert id="bacthInsertProductImg" parameterType="java.util.List">
+		INSERT INTO
+		tb_product_img(img_addr,img_desc,priority,
+		create_time,product_id)
+		VALUES
+		<foreach collection="list" item="productImg" index="index"
+			separator=",">
+			(
+			#{productImg.imgAddr},
+			#{productImg.imgDesc},
+			#{productImg.priority},
+			#{productImg.createTime},
+			#{productImg.productId}
+			)
+		</foreach>
+	</insert>
+	<!--删除指定商品ID下的详情图片集合，更新详情图时候使用  -->
+	<delete id="deleteProductImgByProductId" parameterType="long">
+		DELETE
+		FROM
+		tb_product_img
+		WHERE
+		product_id=#{productId}
+	</delete>
+	<!-- 查询指定唯一商品详情图 -->
+	<select id="queryProductImgList"
+		resultType="top.lothar.o2o.entity.ProductImg">
+		SELECT
+		product_img_id,
+		img_addr,
+		img_desc,
+		priority,
+		create_time,
+		product_id
+		FROM tb_product_img
+		WHERE product_id=#{productId}
+		ORDER BY
+		product_img_id ASC
+	</select>
+	
+</mapper>

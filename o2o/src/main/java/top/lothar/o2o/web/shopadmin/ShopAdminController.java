@@ -38,4 +38,25 @@ public class ShopAdminController {
 		// 转发至店铺管理页面
 		return "shop/shopmanagement";
 	}
+	/**
+	 * 跳转至类别管理页面	
+	 * @return
+	 */
+	@RequestMapping(value="/productcategorymanagement",method=RequestMethod.GET)
+	public String productcategorymanagement(){
+		return "shop/productcategorymanagement";
+	}
+	/**
+	 * 转发至商品添加编辑页面
+	 * @return
+	 */
+	@RequestMapping(value="/productoperation")
+	public String productOperation() {
+		return "shop/productoperation";
+	}
+	
+	@RequestMapping(value="/productmanagement")
+	public String productManagement() {
+		return "shop/productmanagement";
+	}
 }

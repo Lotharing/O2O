@@ -29,7 +29,7 @@
 	<!-- 4.扫描web相关的bean -->
 	<context:component-scan base-package="top.lothar.o2o.web" />
 	
-	    <!-- 5.上传图片解析器-->
+	<!-- 5.上传图片解析器-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
     	<property name="defaultEncoding" value="utf-8"></property>
     	<!-- 最大上传图片大小为1024*1024*20 -->
@@ -37,4 +37,32 @@
     	<property name="maxInMemorySize" value="209715020"></property>
     </bean>
 	
+	<!--6. 拦截权限验证 -->
+    <mvc:interceptors>
+		<!-- 1.校验是否已登录了店家管理系统的拦截器 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/shopadmin/**" />
+<!-- 			<mvc:mapping path="/frontend/cart"/> -->
+			<bean id="ShopInterceptor"
+				class="top.lothar.o2o.interceptor.ShopLoginInterceptor" />
+		</mvc:interceptor>
+		<!-- 2.校验是否对该店铺有操作权限的拦截器 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/shopadmin/**" />
+			<!-- 过滤请求 -->
+			<!-- 不拦截 -->
+			<!-- shoplist page -->
+			<mvc:exclude-mapping path="/shopadmin/shoplist" />
+			<mvc:exclude-mapping path="/shopadmin/getshoplist" />
+			<!-- shopregister page -->
+			<mvc:exclude-mapping path="/shopadmin/getshopinitinfo" />
+			<mvc:exclude-mapping path="/shopadmin/registershop" />
+			<mvc:exclude-mapping path="/shopadmin/shopoperation" />
+			<!-- shopmanage page -->
+			<mvc:exclude-mapping path="/shopadmin/shopmanagement" />
+			<mvc:exclude-mapping path="/shopadmin/getshopmanagementinfo" />
+			<bean id="ShopPermissionInterceptor"
+				class="top.lothar.o2o.interceptor.ShopPermissionInterceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
 </beans>

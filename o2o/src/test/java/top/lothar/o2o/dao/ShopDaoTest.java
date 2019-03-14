@@ -20,6 +20,36 @@ public class ShopDaoTest extends BaseTest{
 	@Autowired
 	private ShopDao shopDao;
 	
+	@Test
+	public void testQueryShopListAndCount(){
+		//店铺初始化
+		Shop shopCondition =new Shop();
+		
+		//店铺类别 id 1 
+		ShopCategory parentShopCategory=new ShopCategory();
+		parentShopCategory.setShopCategoryId(1L);
+		
+		//店铺类别  parent 为 1 也就是在 id 1下的所有店铺类别信息
+		ShopCategory shopCategory=new ShopCategory();
+		shopCategory.setParent(parentShopCategory);
+		
+		//初始化待查询条
+		shopCondition.setShopCategory(shopCategory);
+		
+		System.out.println(shopCondition.getShopCategory().getParent().getShopCategoryId());
+		
+		List<Shop> shopList=shopDao.queryShopList(shopCondition, 0, 10);
+		System.out.println(shopList.size());
+		System.out.println(shopList.get(0).getShopName());
+		System.out.println(shopList.get(1).getShopName());
+		System.out.println(shopList.get(2).getShopName());
+		System.out.println(shopList.get(3).getShopName());
+		System.out.println(shopList.get(4).getShopName());
+		
+		int subtotal=shopDao.queryShopCount(shopCondition);
+		System.out.println(subtotal);
+	}
+	
 	@Ignore
 	public void testQueryShopList() {
 		Shop shopCondition = new Shop();
@@ -43,7 +73,6 @@ public class ShopDaoTest extends BaseTest{
 		System.out.println("查询几条limit限制区域店铺"+shopList.size());
 		System.out.println("查询areaId为1的店铺数量共有"+count);
 	}
-	
 	
 	@Ignore
 	public void testQueryCount() {
@@ -93,13 +122,13 @@ public class ShopDaoTest extends BaseTest{
 		assertEquals(1, effectedNum);
 	}
 	
-	@Test
+	@Ignore
 	public void testUpdateShop() {
 		Shop shop = new Shop();
 		//更新第一条信息
 		shop.setShopId(1L);
 		shop.setShopName("店铺1");
-		shop.setShopDesc("测试更新");
+		shop.setShopDesc("更新");
 		shop.setLastEditTime(new Date());
 		int effectedNum = shopDao.updateShop(shop);
 		assertEquals(1, effectedNum);
